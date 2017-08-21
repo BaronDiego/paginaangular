@@ -18,7 +18,6 @@ export class ProductosService {
 
     const promesa = new Promise((resolve, reject) => {
       this.http.get('https://paginaweb-5ecd2.firebaseio.com/productos_idx.json').subscribe( res => {
-        console.log( res.json());
         this.cargando = false;
         this.productos = res.json();
         resolve();
@@ -32,8 +31,6 @@ export class ProductosService {
   }
 
   public buscarProductos ( termino: string){
-    console.log('Buscando productos');
-    console.log(this.productos.length);
     if(this.productos.length === 0){
       this.cargarProductos().then(() => {
         this.filtrarProductos(termino);
@@ -50,6 +47,5 @@ export class ProductosService {
       if (prod.categoria.indexOf( terimino )>=0 || prod.titulo.toLowerCase().indexOf( terimino )>=0){
         this.productosFiltrados.push( prod );
       }
-      console.log(prod);
     });}
 }
