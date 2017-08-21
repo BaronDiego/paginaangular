@@ -9,7 +9,9 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class PortafolioComponent {
 
-  constructor( private _ps: ProductosService) { }
+  cargando:string = undefined;
+
+  constructor( public _ps: ProductosService) { }
 
 
 

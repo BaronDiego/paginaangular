@@ -11,8 +11,9 @@ import { ProductosService } from '../../services/productos.service';
 export class BuscarComponent {
 
   termino: string = undefined;
+  cargando: string= undefined;
 
-  constructor( private route: ActivatedRoute, private _ps: ProductosService ) {
+  constructor( private route: ActivatedRoute, public _ps: ProductosService ) {
 
     route.params.subscribe( parametros=>{
       this.termino = parametros['termino'];
