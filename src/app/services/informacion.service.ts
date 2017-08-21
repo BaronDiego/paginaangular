@@ -27,7 +27,6 @@ export class InformacionService {
     this.http.get('https://paginaweb-5ecd2.firebaseio.com/equipo.json').subscribe( data => {
       this.equipo = data.json();
       this.cargadaSobreNosotrso = true;
-      console.log(data.json());
     })
    }
 
