@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { app_routing } from './app.routes';
 
 import { InformacionService } from './services/informacion.service';
+import { ProductosService } from './services/productos.service';
+
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +31,8 @@ import { ProductoComponent } from './componentes/producto/producto.component';
     HttpModule
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
